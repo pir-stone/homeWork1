@@ -34,9 +34,15 @@ public class homework {
         String text = "234";
         String text2 = "some_text";
         int answer = Integer.parseInt(text);
-        System.out.println(answer + text2.length());
+        System.out.println(answer + text2.length() + "\n");
 
 // задача 2
+        //Задача №2
+        //Посчитать (a+b)^2 = ?, при a=3, b=5
+        int a = 3;
+        int b = 5;
+        int c = (a + b) * (a + b);
+        System.out.println(c);
 
     }
 }
