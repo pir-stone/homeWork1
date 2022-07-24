@@ -96,12 +96,12 @@ public class homework2 {
         int[] numbers = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
         for (int k = 0; k < numbers.length; k++) {
 //            System.out.println(numbers[k]);
-            if (k % 2 == 1){
-                numbers[k] = 0;
+            if ((k+1) % 2 == 1){
+                numbers[k] = numbers[k];
 //                System.out.println(numbers[k]);
             }
             else {
-                numbers[k] = numbers[k];
+                numbers[k] = 0;
 //                System.out.println(numbers[k]);
             }
             System.out.print(numbers[k] + ",");
