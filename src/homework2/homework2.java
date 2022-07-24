@@ -1,5 +1,7 @@
 package homework2;
 
+import java.sql.SQLOutput;
+
 public class homework2 {
     public static void main(String[] args) {
 //        Задача 1
@@ -65,5 +67,44 @@ public class homework2 {
         System.out.println(mikkie.getWeight());
         mikkie.setColour("black");
         System.out.println(mikkie.getColour());
+        System.out.println('\n');
+        // Продвинутый уровень
+        // Задание №1: Написать цикл, который будет прибавлять число к result до тех пор,
+        // пока не получиться больше 1_000_000.
+        // Дано:
+        double increment = 0.01123;
+        double result = 0;
+        // Вывести на экран, количество итераций, которое потребовалось, чтобы дойти до миллиона.
+        // Если число отрицательное, то сразу заканчиваем цикл, ничего не выводя.
+        // Внимание: число может измениться, и не должно приводить к изменению вашего кода.
+        int j = 0;
+        while (result <= 1_000_000){
+            if (result < 0) {
+                break;
+            }
+            result = result + increment;
+            j ++;
+        }
+        System.out.println(result);
+        System.out.println(j -=1);
+        System.out.println('\n');
+
+        // Задание №2: Дан массив единиц, произвольной длины. Создать цикл, который заменяет каждый четный элемент на 0;
+        // Например, дано: [1,1,1,1,1]
+        // Ожидаемый результат: [0,1,0,1,0]
+        // Подсказка: прочитай про операнд "%".
+        int[] numbers = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        for (int k = 0; k < numbers.length; k++) {
+//            System.out.println(numbers[k]);
+            if (k % 2 == 1){
+                numbers[k] = 0;
+//                System.out.println(numbers[k]);
+            }
+            else {
+                numbers[k] = numbers[k];
+//                System.out.println(numbers[k]);
+            }
+            System.out.print(numbers[k] + ",");
+        }
     }
 }
